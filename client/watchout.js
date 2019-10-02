@@ -9,6 +9,7 @@ var gameOptions = {
 
 var gameStats = {
   score: 0,
+  level: 0,
   bestScore: 0
 };
 
@@ -141,6 +142,7 @@ var resetScore = function() {
     gameStats.bestScore = gameStats.score;
     d3.select('.high span').text(gameStats.bestScore);
   }
+  gameStats.level++;
   gameStats.score = 0;
 };
 
